@@ -1,0 +1,13 @@
+package mvc.repository;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import mvc.domain.PrenotazioneSpring;
+import mvc.domain.PrenotazioneWebSpring;
+
+@Repository
+public interface PrenotazioneWebRepository extends CrudRepository<PrenotazioneSpring, Long>
+{
+	PrenotazioneWebSpring save(PrenotazioneWebSpring prenotazione);
+}

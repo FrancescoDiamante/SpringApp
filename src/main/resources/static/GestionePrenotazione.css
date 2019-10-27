@@ -1,0 +1,215 @@
+			.switch {
+			  position: relative;
+			  display: inline-block;
+			  width: 40px;
+			  height: 20px;
+			}
+
+			/* Hide default HTML checkbox */
+			.switch input {
+			  opacity: 0;
+			  width: 0;
+			  height: 0;
+			}
+
+			/* The slider */
+			.slider {
+			  position: absolute;
+			  cursor: pointer;
+			  top: 0;
+			  left: 0;
+			  right: 0;
+			  bottom: 0;
+			  background-color: #ccc;
+			  -webkit-transition: .2s;
+			  transition: .2s;
+			}
+
+			.slider:before {
+			  position: absolute;
+			  content: "";
+			  height: 16px;
+			  width: 16px;
+			  left: 4px;
+			  bottom: 2px;
+			  background-color: white;
+			  -webkit-transition: .2s;
+			  transition: .2s;
+			}
+
+			input:checked + .slider {
+			  background-color: #2196F3;
+			}
+
+			input:focus + .slider {
+			  box-shadow: 0 0 1px #2196F3;
+			}
+
+			input:checked + .slider:before {
+			  -webkit-transform: translateX(16px);
+			  -ms-transform: translateX(16px);
+			  transform: translateX(16px);
+			}
+
+			/* Rounded sliders */
+			.slider.round {
+			  border-radius: 34px;
+			}
+
+			.slider.round:before {
+			  border-radius: 50%;
+			}
+			
+			* {
+			  box-sizing: border-box;
+			  padding: 0%;
+			  margin: 0%;
+			}
+
+			/* Create three equal columns that floats next to each other */
+			.colonna {
+			  float: left;
+			  width: 27%;
+			  padding: 0px;
+			
+			}
+			.navbarallineata{
+			  float: left;
+			  width: 90%;
+			  padding: 0;
+			}
+			.logo{
+				float: left;
+				width:10%;
+				padding: 5px;
+			}
+			.colonna1 {
+			  float: left;
+			  width: 46%;
+			  padding: 0px;
+			}
+
+			.colonnaInterna {
+			  float: left;
+			  width: 50%;
+			  padding: 10px;
+			  
+			}
+
+			/* Clear floats after the columns */
+			.row:after {
+			  content: "";
+			  display: table;
+			  clear: both;
+			}
+
+			.navbar {
+			  margin-top: 1.7%;
+			  width: 100%;
+			  background-color: #52ccdb;
+			  overflow: auto;
+			}
+
+			.navbar a {
+			  float: left;
+			  padding: 12px;
+			  color: white;
+			  text-decoration: none;
+			  font-size: 26px;
+			  width: 25%; /* Four links of equal widths */
+			  text-align: center;
+			}
+
+			.navbar a:hover {
+			  background-color: #0033FF;
+			}
+
+			.navbar a.active {
+			  background-color: #0033FF;
+			}
+
+			@media screen and (max-width: 500px) {
+			  .navbar a {
+				float: none;
+				display: block;
+				width: 100%;
+				text-align: left;
+			  }
+			}	
+
+			.tooltip {
+			  position: relative;
+			  display: inline-block;
+			}
+
+			.tooltip .tooltiptext {
+			  visibility: hidden;
+			  width: 120px;
+			  background-color: #555;
+			  color: #fff;
+			  text-align: center;
+			  border-radius: 25px;
+			  padding: 5px 0;
+			  position: absolute;
+			  z-index: 1;
+			  bottom: 125%;
+			  left: 50%;
+			  margin-left: -60px;
+			  opacity: 0;
+			  transition: opacity 0.3s;
+			}
+
+			.tooltip .tooltiptext::after {
+			  content: "";
+			  position: absolute;
+			  top: 100%;
+			  left: 50%;
+			  margin-left: -5px;
+			  border-radius: 25px;
+			  border-width: 5px;
+			  border-style: solid;
+			  border-color: #555 transparent transparent transparent;
+			}
+
+			.tooltip:hover .tooltiptext {
+			  visibility: visible;
+			  opacity: 1;
+			}
+			
+.text-decoration{
+  text-align: justify;
+  font-size: 15px;
+  font-family: Book Antiqua, sans-serif;
+}
+.pulsante {
+outline: none;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+font: bold 15px Arial, Helvetica, sans-serif;
+color: #fff;
+padding: 10px 20px;
+border: solid 1px #0076a3;
+background: #52ccdb;
+background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+background: -webkit-linear-gradient(top, #00adee, #0078a5);
+background: -moz-linear-gradient(top, #00adee, #0078a5);
+background: -ms-linear-gradient(top, #00adee, #0078a5);
+background: -o-linear-gradient(top, #00adee, #0078a5);
+-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+-moz-border-radius: 20px;
+-webkit-border-radius: 20px;
+border-radius: 20px;
+}
+
+input{
+	border-radius:25px; 
+}
+
+textarea{
+	border-radius:15px
+	
+}
+			

@@ -1,0 +1,104 @@
+package mvc.domain;
+
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Cliente")
+public class ClienteSpring extends PersonaSpring {
+
+	@OneToMany(mappedBy = "clientePrenotato", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private List<PrenotazioneSpring> listaPrenotazioni;
+	//private PrenotazioneSpring[] listaPrenotazioni = new PrenotazioneSpring[10]; 
+	private int numeroPrenotazioni = 0;
+	
+	public ClienteSpring() {}
+	
+	public ClienteSpring(String nome, String cognome, String username, String password, String CF, String email) {
+		super(nome, cognome, username, password, CF, email);
+	}
+	
+	
+//	public boolean aggiungiPrenotazione(PrenotazioneSpring nuovaPrenotazione) {
+//		if (nuovaPrenotazione.getDataPrenotazione().toString().length() != 10) {
+//			return false;
+//		}
+//		else if (nuovaPrenotazione.getTipoProblema().equals("")) {
+//			return false;
+//		}
+//			
+//		if (nuovaPrenotazione instanceof PrenotazioneWebSpring)  {
+//			System.out.println("sto registrando una PrenotazioneSpring che arriva dal web.");
+//			if (((PrenotazioneWebSpring) nuovaPrenotazione).getEmail().isEmpty()) {
+//				
+//				return false;
+//			}
+//		}
+////		else if (nuovaPrenotazione instanceof PrenotazioneSmsSpring) {
+////			System.out.println("sto registrando una PrenotazioneSpring che arriva da sms.");
+//////			if (((PrenotazioneSmsSpring) nuovaPrenotazione).getNumeroTelefono().isEmpty()) {
+//////				return false;
+//////			}
+////		}
+//		
+//		this.aggingiPrenotazioneCliente(nuovaPrenotazione);
+//		
+//		//insert db
+//		System.out.println("PrenotazioneSpring registrata ->" + nuovaPrenotazione);
+//		
+//		//aggiungo il cliente all'oggetto PrenotazioneSpring
+//		nuovaPrenotazione.setClientePrenotato(this);
+//		
+//		//aggiungo la PrenotazioneSpring al calendario dello studio dentistico
+//		CalendarioSpring.calendarioPrenotazioni.add(nuovaPrenotazione);
+//		
+//		return true;
+//	}
+	
+	
+//	public void printPrenotazioniCliente() {
+//		for (int i=0; i<10; i++) {
+//			if(listaPrenotazioni[i]!=null)
+//				System.out.println("PrenotazioneSpring numero "+ (i+1) +" "+ listaPrenotazioni[i]);
+//		}
+//	}
+//	
+//	public PrenotazioneSpring[] getListaPrenotazioni() {
+//		return listaPrenotazioni;
+//	}
+	
+//	public void setListaPrenotazioni(PrenotazioneSpring[] listaPrenotazioni) {
+//		this.listaPrenotazioni = listaPrenotazioni;
+//	}
+	
+//	public void aggingiPrenotazioneCliente(PrenotazioneSpring nuovaPrenotazione) {
+//		if (numeroPrenotazioni >=0 && numeroPrenotazioni < 10) {
+//			listaPrenotazioni[numeroPrenotazioni] = nuovaPrenotazione;
+//			numeroPrenotazioni++;
+//		}
+//		else {
+//			System.out.println("Massimo numero di prenotazioni raggiunto!");
+//		}
+//	}
+	
+	public int getNumeroPrenotazioni() {
+		return numeroPrenotazioni;
+	}
+	
+	public void setNumeroPrenotazioni(int numeroPrenotazioni) {
+		this.numeroPrenotazioni = numeroPrenotazioni;
+	}
+
+	
+	
+
+	
+	
+}
+	
+	

@@ -1,0 +1,25 @@
+package mvc.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import mvc.domain.DentistaSpring;
+import mvc.repository.DentistaRepository;
+
+@Service
+public class DentistaServiceWithCrudRepository {
+
+	private DentistaRepository denstistaRepository;
+
+	@Autowired
+	public DentistaServiceWithCrudRepository(DentistaRepository denstistaRepository)
+	{
+		this.denstistaRepository=denstistaRepository;
+	}
+	
+	public DentistaSpring getDentistaByCF(String CF)
+	{
+		return  denstistaRepository.findByCf(CF);
+	}
+	
+}

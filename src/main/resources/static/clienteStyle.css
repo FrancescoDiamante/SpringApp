@@ -1,0 +1,341 @@
+* {  box-sizing: border-box;
+  margin:0%;
+  padding:0%; }
+
+/*TABELLE RESPONSIVE (NON TROPPO)*/
+@media 
+	only screen 
+    and (max-width: 760px), (min-device-width: 768px) 
+    and (max-device-width: 1024px){
+
+		/* Force table to not be like tables anymore */
+		profile,dentists, thead, tbody, th, td, tr {
+			display: block;
+		}
+		/* Hide table headers (but not display: none;, for accessibility) */
+		thead tr {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+    tr {
+      margin: 0 0 1rem 0;
+    }
+}
+
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 13px;
+}
+input[type="text"], textarea{	
+ background-color: rgba(0,0,0,0); 
+ border: none;
+}
+
+#profile{
+ text-align:left;
+ border-spacing: 10px;
+ border-collapse: separate;
+}
+
+#titleDentists{
+	color: black;
+	text-align: center;
+	font-size: 30px;
+	text-decoration:none;
+	padding-top:20px;
+	
+}
+
+#dentists{
+ border-spacing: 29px;
+ border-collapse: separate;
+ text-align:center;
+ width:100%;
+}
+
+a{
+	text-decoration:none;
+}
+#home{
+	color:white;
+	text-decoration:none;
+}
+
+#leftcolumn { 
+ margin-top: 50px;
+ color: #333;
+ background:#52ccdb;
+ padding: 10px;
+ width: calc(100% - 81%);		
+ float: left;
+}
+#rightcolumn { 
+
+ margin-top: 50px;
+ float: right;
+ color: #333;
+ background:#52ccdb;
+ padding: 10px;	
+ width: calc(100% - 81%);	
+}
+#content{
+	
+ float:left;
+ width:calc(100% - 43%);
+ background-color: rgba(255,255,255,1);
+}
+/*CARD DENTISTI*/
+.flip-card {
+  background-color: transparent;
+  width: 180px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #52ccdb;
+  color: white;
+  transform: rotateX(180deg);
+}
+
+#chooseDentist{
+	
+	margin-top:200px;
+	
+}
+#chooseService{
+	
+	margin-top:20px;
+	
+}
+
+
+/*-----------------------------------------------------*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+
+
+
+div.table-title {
+  margin-top:50px;
+  display: block;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+}
+
+.table-title h3 {
+   color: #fafafa;
+   font-size: 30px;
+   font-weight: 400;
+   font-style:normal;
+   font-family: "Roboto", helvetica, arial, sans-serif;
+   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+   text-transform:uppercase;
+}
+
+
+/*** Table Styles **/
+
+.table-fill {
+  color: black;
+  background-color: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+ 
+.text-left {
+  color: black;
+  background:#1b1e24;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:23px;
+  font-weight: 100;
+  padding:24px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+.text-left:first-child {
+  border-top-left-radius:3px;
+}
+ 
+.text-left:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+  
+tr#table-fill-tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom-: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+ 
+tr#table-fill-tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+}
+ 
+tr#table-fill-tr:first-child {
+  border-top:none;
+}
+
+tr#table-fill-tr:last-child {
+  border-bottom:none;
+}
+ 
+tr#table-fill-tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+ 
+tr#table-fill-tr:nth-child(odd):hover td {
+  background:#4E5066;
+}
+
+tr#table-fill-tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+ 
+tr#table-fill-tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+ 
+.text-left {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
+.text-left:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
+}
+
+.footer{
+ padding-top:25px;
+ padding-bottom:25px;
+ text-align:center;
+ background-color: #7a95ff;
+ width:100%;					
+ float:left;
+ margin-top:25px;
+}
+.colonna {
+  float: left;
+  width: 27%;
+  padding: 0px;
+}
+ 
+.colonna1 {
+  float: left;
+  width: 46%;
+  padding: 0px;
+}
+#profile{
+ text-align:left;
+ border-spacing: 10px;
+ border-collapse: separate;
+}
+.pulsante {
+outline: none;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+font: bold 15px Arial, Helvetica, sans-serif;
+color: #fff;
+padding: 10px 20px;
+border: solid 1px #0076a3;
+background: #52ccdb;
+background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+background: -webkit-linear-gradient(top, #00adee, #0078a5);
+background: -moz-linear-gradient(top, #00adee, #0078a5);
+background: -ms-linear-gradient(top, #00adee, #0078a5);
+background: -o-linear-gradient(top, #00adee, #0078a5);
+-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+-moz-border-radius: 20px;
+-webkit-border-radius: 20px;
+border-radius: 20px;
+}
+input[type="text"],input[type="mail"]{
+border-radius:25px; 
+}
+.logo{
+    float: left;
+    width:10%;
+    padding: 5px;
+}
+.navbarallineata{
+  float: left;
+  width: 90%;
+  padding: 0;
+}

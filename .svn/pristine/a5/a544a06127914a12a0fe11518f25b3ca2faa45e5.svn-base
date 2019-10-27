@@ -1,0 +1,155 @@
+/*Calendario*/
+
+.mese {
+  padding: 40px 25px;;
+  width: 100%;
+  background: #4f74b5;
+  text-align: center;
+}
+
+.mese ul {
+  margin: 0;
+  padding: 0;
+}
+
+.mese ul li {
+  list-style: none;
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.mese .prima {
+  float: left;
+  padding-top: 10px;
+}
+
+.mese .dopo {
+  float: right;
+  padding-top: 10px;
+}
+
+.settimana {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.settimana li {
+  display: inline-block;
+  width: 12.6%;
+  color: #666;
+  text-align: center;
+}
+
+.giorno {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.giorno li {
+  list-style-type: none;
+  display: inline-block;
+  width: 12.5%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.giorno li .attivo {
+  padding: 5px;
+  background: #4f74b5;
+  color: white !important
+}
+
+table {
+  font-family: arial, sans-serif; /* Imposta il font della tabella */
+  border-collapse: collapse;      /* Imposta che i bordi della tabella devono essere unici */
+  width: 100%;                    /* Imposta che grandezza della tabella deve riempire il 100% del suo contenitore  */
+}
+
+td, th {
+  border: 1px solid #dddddd;  /* Imposta il colore e la grandezza del bordo delle celle */
+  text-align: left;           /* Allinea a sinistra il testo delle celle */
+  padding: 7px;               /* Imposta lo spazio tra il bordo e il contenuto delle celle */
+}
+
+* {
+  box-sizing: border-box;    /* L'altezza e la lunghezza vengono impostati a tutti gli elementi del box */
+}
+
+.clearfix {               
+  overflow: auto;
+}
+
+/* Creo due contenitori che si allineano uno di fianco all'altro (nav e article)  #bed5e4*/
+nav {
+  float: left;
+  width: 25%;
+  background: #ffffff;
+  padding: 20px;
+  padding-top: 65px;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 75%;
+  background-color: #e7f0f5;
+  height: 450px; 
+  
+  
+}
+
+/* Serve a non far uscire i contenuti fuori dai contenitori */
+
+
+/* Stile del footer (vecchio)*/
+/*footer {
+  background-color: #86b1cc;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+*/
+
+select{
+	background: #f4f8fa;
+}
+input{
+	background: #f4f8fa;
+}
+/* Responsive  -  fa si che le due colonne si allineano una sull'altra invece che una di finaco all'altra quando la larghezza dello schermo raggiunge un minimo di 600px */
+@media (max-width: 600px) {  /* Utilizza il metodo media per aggiungere delle proprietà al css quando la condizione è vera */
+  nav, article {
+    width: 100%;      /* Imposta la larghezza di nav e article a 100% */
+    height: auto;     /* Imposta la lunghezza di nav e article in auto */
+  }
+ .pulsante {
+outline: none;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+font: bold 15px Arial, Helvetica, sans-serif;
+color: #fff;
+padding: 10px 20px;
+border: solid 1px #0076a3;
+background: #52ccdb;
+background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+background: -webkit-linear-gradient(top, #00adee, #0078a5);
+background: -moz-linear-gradient(top, #00adee, #0078a5);
+background: -ms-linear-gradient(top, #00adee, #0078a5);
+background: -o-linear-gradient(top, #00adee, #0078a5);
+-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+-moz-border-radius: 20px;
+-webkit-border-radius: 20px;
+border-radius: 20px;
+}
+input[type="text"],input[type="mail"]{
+border-radius:25px; 
+}

@@ -1,0 +1,12 @@
+package mvc.repository;
+
+import org.springframework.stereotype.Repository;
+
+import mvc.domain.PersonaSpring;
+
+import org.springframework.data.repository.CrudRepository;
+
+@Repository
+public interface PersonaRepository extends CrudRepository<PersonaSpring, String>{
+	PersonaSpring findByCf(String cf);
+}

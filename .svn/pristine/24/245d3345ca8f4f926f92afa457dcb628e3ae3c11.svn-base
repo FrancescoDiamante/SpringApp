@@ -1,0 +1,15 @@
+package mvc.repository;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import mvc.domain.ClienteSpring;
+
+@Repository
+public interface ClienteRepository extends CrudRepository<ClienteSpring,String> 
+{	
+	//ClienteSpring save(ClienteSpring cliente);	
+	
+	//ClienteSpring update(ClienteSpring cliente);
+	
+}

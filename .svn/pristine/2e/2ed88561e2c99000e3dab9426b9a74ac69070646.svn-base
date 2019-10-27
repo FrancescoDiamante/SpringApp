@@ -1,0 +1,15 @@
+package mvc.repository;
+import org.springframework.stereotype.Repository;
+
+import mvc.domain.PrenotazioneSmsSpring;
+
+import org.springframework.data.repository.CrudRepository;
+
+
+
+@Repository
+public interface PrenotazioneSmsRepository extends CrudRepository <PrenotazioneSmsSpring , Long> {
+
+	
+	
+}

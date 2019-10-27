@@ -1,0 +1,43 @@
+.logo{
+    float: left;
+    width:10%;
+    padding: 5px;
+}
+.navbarallineata{
+  float: left;
+  width: 90%;
+  padding: 0;
+}
+.navbar {
+	margin-top:1.7%;
+  width: 100%;
+  background-color: #52ccdb;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 26px;
+  width: 25%; /* Four links of equal widths */
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #366fc6;
+}
+
+.navbar a.active {
+  background-color: #366fc6;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
